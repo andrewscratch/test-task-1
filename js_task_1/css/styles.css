@@ -124,12 +124,12 @@ button {
 }
 
 button#cancel {
-  background-color: lightcoral;
+  background-color: rgb(249, 0, 0);
   color: white;
 }
 
 button#submit {
-  background-color: lightgreen;
+  background-color: rgb(1, 85, 1);
   color: white;
 }
 
