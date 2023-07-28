@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hometask #1 | JavaScript</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <table class="list-of-notes">
+        <thead class="table-head list-of-notes__head">
+          <tr class="table-row">
+            <th class="logo"></th>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Category</th>
+            <th>Content</th>
+            <th>Dates</th>
+            <th colspan="3" id="toggle">
+              <div><i class="bi bi-arrow-repeat"></i>Active Notes</div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody class="list-of-notes__body" data-status="active"></tbody>
+
+        <template id="note-template">
+          <tr class="table-row">
+            <td class="logo"><div class="circle"></div></td>
+            <td class="name"></td>
+            <td class="created"></td>
+            <td class="category"></td>
+            <td class="content"></td>
+            <td class="dates"></td>
+            <td class="icon edit"><i class="bi bi-pencil-fill"></i></td>
+            <td class="icon archive"></td>
+            <td class="icon delete"><i class="bi bi-trash-fill"></i></td>
+          </tr>
+        </template>
+      </table>
+
+      <div class="wrapper">
+        <button id="addNote">Create Note</button>
+      </div>
+
+      <dialog id="dialog">
+        <form method="dialog" id="form">
+          <label for="name">Note name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="off"
+            required
+          />
+          <section>
+            <p>
+              <label for="category">Choose category:</label>
+              <select id="category" name="category" required>
+                <option value="Task">Task</option>
+                <option value="Random Thought">Random Thought</option>
+                <option value="Idea">Idea</option>
+                <option value="Quote">Quote</option>
+              </select>
+            </p>
+          </section>
+          <p>Note content:</p>
+          <textarea
+            name="content"
+            id="content"
+            wrap="soft"
+            maxlength="200"
+            cols="40"
+            rows="5"
+            required
+          ></textarea>
+          <p class="error-message"></p>
+          <menu>
+            <button id="cancel" type="reset">Cancel</button>
+            <button id="submit" type="submit">Confirm</button>
+          </menu>
+        </form>
+      </dialog>
+
+      <table class="statistics">
+        <thead class="table-head statistics__head">
+          <tr class="table-row">
+            <th class="logo"></th>
+            <th>Category</th>
+            <th>Active</th>
+            <th>Archived</th>
+          </tr>
+        </thead>
+
+        <tbody class="statistics__body"></tbody>
+
+        <template id="category-template">
+          <tr class="table-row">
+            <td class="logo"><div class="circle"></div></td>
+            <td class="category"></td>
+            <td class="active-count"></td>
+            <td class="archive-count"></td>
+          </tr>
+        </template>
+      </table>
+    </div>
+
+    <script type="module" src="js/render.js"></script>
+  </body>
+</html>
