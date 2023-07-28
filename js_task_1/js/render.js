@@ -1,5 +1,3 @@
-render.js;
-
 import { icons } from "./data.js";
 
 import {
