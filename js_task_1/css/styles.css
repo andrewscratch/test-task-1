@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #e0ecff;
+  --secondary-color: #999;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+table {
+  margin: 2em auto;
+  text-align: left;
+  border-spacing: 0 0.5em;
+}
+
+thead {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  color: white;
+}
+
+th {
+  height: 3.5em;
+  padding-left: 0.5em;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.list-of-notes__head th {
+  min-width: 9em;
+}
+
+.statistics__head th {
+  min-width: 18.5em;
+}
+
+th.logo {
+  min-width: 3.5em;
+}
+
+th.icon {
+  min-width: 2em;
+}
+
+td.icon {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+td {
+  max-width: 10em;
+  height: 3.5em;
+  padding-left: 0.5em;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: var(--primary-color);
+}
+
+td.logo {
+  text-align: center;
+  padding-left: 0;
+}
+
+td.icon i,
+th#toggle {
+  cursor: pointer;
+}
+
+td:not(:nth-of-type(2)) {
+  color: var(--secondary-color);
+}
+
+.circle {
+  width: 3em;
+  height: 3em;
+  margin: auto;
+  border-radius: 2em;
+  background: var(--secondary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle i {
+  font-size: 2em;
+  display: flex;
+  align-self: center;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+#dialog {
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 1em;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+  color: var(--secondary-color);
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+button#cancel {
+  background-color: lightcoral;
+  color: white;
+}
+
+button#submit {
+  background-color: lightgreen;
+  color: white;
+}
+
+.error-message {
+  color: lightcoral;
+}
